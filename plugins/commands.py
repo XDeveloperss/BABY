@@ -50,6 +50,10 @@ async def start(client, message):
             InlineKeyboardButton('➕ JOIN CHANNEL ➕', url=f'https://t.me/moviesupdateck')            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        h = await message.reply_sticker(
+                sticker= "CAACAgUAAxkBAAKZm2IYvgABZwsFTJfT12v7vcVl3xv6CAACaQAD56Y5LQOuvTm_Uzn-IwQ")
+        await asyncio.sleep(1)
+        await h.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
