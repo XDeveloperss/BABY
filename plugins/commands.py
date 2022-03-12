@@ -22,7 +22,7 @@ ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(bot, message):
     await msg.reply_sticker(
-        sticker="CAACAgQAAxkBAAJQzmIZo8u3pHF8ulLUGT7dUeIjAAF78QACVQADjRtGJ-yIezShSzCbHgQ")
+        sticker="CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ")
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
@@ -51,7 +51,7 @@ async def start(client, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         h = await message.reply_sticker(
-                sticker= "CAACAgUAAxkBAAKZm2IYvgABZwsFTJfT12v7vcVl3xv6CAACaQAD56Y5LQOuvTm_Uzn-IwQ")
+                sticker= "CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ)
         await asyncio.sleep(1)
         await h.delete()
         await message.reply_photo(
