@@ -250,11 +250,11 @@ async def bot(bot, message):
  ➪ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ. 
       
  /update - മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യാനുള്ള ലിങ്ക് വേണമെങ്കിൽ ഈ കമാൻഡ് ഉപയോഗിക്കാം 😀"""
-         reply_markup=InlineKeyboardMarkup([[
-             InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
-             InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
-             ]]
-         ) 
+        reply_markup=InlineKeyboardMarkup([[
+            InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
+            InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
+            ]]
+        ) 
     ) 
 
 @Client.on_message(filters.command("st"))
