@@ -258,7 +258,7 @@ async def bot(bot, message):
         caption=script.BOT_TXT.format(message.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
-    await asyncio.sleep(1)
+    await asyncio.sleep(30)
     await h.delete()
          
 
