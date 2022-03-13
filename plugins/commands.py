@@ -249,8 +249,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
     buttons = [[
-        InlineKeyboardButton("DIDN'T GET MOVIE", callback_data="tip3"),
-        InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="tip3"),
+        InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ", callback_data="tip3")
+        ],[
+        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="tip3"),
+        InlineKeyboardButton("ᴇɴqᴜɪʀy", callback_data="tip3")
+        ],[
+        InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     h=await message.reply_photo(
