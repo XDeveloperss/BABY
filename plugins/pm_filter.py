@@ -418,7 +418,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
-            InlineKeyboardBmfk2on('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -446,6 +446,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='start')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.SERCH_MOVIE.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
             
     elif query.data == "help":
         buttons = [[
