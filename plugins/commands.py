@@ -248,10 +248,10 @@ async def bot(bot, message):
         InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
     ]]
     await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.BOT_TXT.format(message.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode='html')
+        photo=random.choice(PICS),
+        caption=script.BOT_TXT.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
          
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
