@@ -245,8 +245,8 @@ async def start(client, message):
 async def bot(bot, message):
     await message.reply_photo(
         photo="https://telegra.ph/file/84f46d98d29fd6c8d3a8c.jpg",
-        caption="➪ എങ്ങനെ നിങ്ങൾക്ക് ഈ ബോട്ട് പ്രവർത്തിപ്പിക്കാം"
-        reply_markup = InlineKeyboardMarkup( [[
+        caption="➪ എങ്ങനെ നിങ്ങൾക്ക് ഈ ബോട്ട് പ്രവർത്തിപ്പിക്കാം", 
+        reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
             InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
             ]]
