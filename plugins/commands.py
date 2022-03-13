@@ -260,7 +260,21 @@ async def bot(bot, message):
         parse_mode="html")
     await asyncio.sleep(50)
     await h.delete()
-       
+  
+@Client.on_message(filters.command("update"))
+async def update(bot, message):
+    buttons = [[
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        ],[
+        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.UPDATE_CMD.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
+    
 @Client.on_message(filters.command("command"))
 async def command(bot, message):
     buttons = [[
