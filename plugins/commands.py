@@ -254,7 +254,7 @@ async def bot(bot, message):
         reply_markup=reply_markup,
         parse_mode="html")
     await asyncio.sleep(10)
-        await h.delete()
+    await h.delete()
          
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
