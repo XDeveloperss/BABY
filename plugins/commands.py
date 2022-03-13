@@ -243,19 +243,16 @@ async def start(client, message):
 
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
+    buttons = [[
+        InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
+        InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
+    ]]
     await message.reply_photo(
-        photo="https://telegra.ph/file/84f46d98d29fd6c8d3a8c.jpg",
-        caption="""➪ എങ്ങനെ നിങ്ങൾക്ക് ഈ ബോട്ട് പ്രവർത്തിപ്പിക്കാം
- 
-➪ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ. 
-
-/update - മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യാനുള്ള ലിങ്ക് വേണമെങ്കിൽ ഈ കമാൻഡ് ഉപയോഗിക്കാം 😀""", 
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
-            InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
-            ]]
-        ) 
-    ) 
+            photo=random.choice(PICS),
+            caption=script.BOT_TXT.format(message.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+         
 
 @Client.on_message(filters.command("st"))
 async def st(bot, message):
