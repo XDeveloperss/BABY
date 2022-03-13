@@ -241,10 +241,15 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
 
+@Client.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data == "tip3": 
+        await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
     buttons = [[
-        InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
+        InlineKeyboardButton("DIDN'T GET MOVIE", callback_data="tip3"),
         InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
