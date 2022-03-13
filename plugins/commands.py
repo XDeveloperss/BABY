@@ -5,7 +5,7 @@ import asyncio
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
@@ -18,6 +18,11 @@ logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
 
+ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
+@Client.on_message(filters.private & filters.command(['start']))
+async def start(bot, message):
+    await msg.reply_sticker(
+        sticker="CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ")
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
@@ -42,15 +47,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-            ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('➕ JOIN CHANNEL ➕', url=f'https://t.me/moviesupdateck')            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        h = await message.reply_sticker(
+                sticker= "CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ")
+        await asyncio.sleep(2)
+        await h.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -85,13 +88,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-            ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('➕ JOIN CHANNEL ➕', url=f'https://t.me/moviesupdateck')            
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -243,7 +240,52 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-                    
+
+@Client.on_callback_query()
+async def cb_handler(client: Client, query: CallbackQuery):
+    if query.data == "tip3": 
+        await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+    elif query.data == "getmovie": 
+          await query.answer(f" ➪ നിങ്ങൾ ബോട്ടിന്റെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്തിട്ടില്ല അതാണ് നിങ്ങൾക് സിനിമ കിട്ടാത്തത്  😃 \n\n ➪ മെയിൻ ചാനൽ link കിട്ടാൻ നിങ്ങൾ /clink എന്ന് മെസ്സേജ്  അയച്ചാൽ മതി 😁",show_alert=True)
+    elif query.data == "searchfile": 
+          await query.answer(f" ➪ inline ആയി മൂവി സെർച്ച്‌ ചെയ്യാൻ നിങ്ങൾ ബോട്ടിൽ /start എന്ന് അടിക്കുക \n\n ➪ ബോട്ട് റിപ്ലേ തരുന്ന മെസ്സേജിൽ ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ എന്ന ബട്ടണിൽ ക്ലിക്ക് ചയ്യുക",show_alert=True)
+    elif query.data == "commamds": 
+          await query.answer(f" ➪ നിങ്ങൾക്ക് ഇ ബോട്ടിൽ ലബ്യമായിട്ടുള്ള കമാണ്ടുകൾ കാണണം എങ്കിൽ /command എന്ന് മെസ്സേജ് ഇടുക",show_alert=True)
+    elif query.data == "enqury": 
+          await query.answer(f" ➪ നിങ്ങൾക് എന്തെങ്കിലും പറയാനുണ്ടേൽ admin ആയി ബന്ധപെടേണ്ടത് ആണ്",show_alert=True)
+@Client.on_message(filters.command("bot"))
+async def bot(bot, message):
+    buttons = [[
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="getmovie"),
+        InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ", callback_data="searchfile")
+        ],[
+        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="commamds"),
+        InlineKeyboardButton("ᴇɴqᴜɪʀy", callback_data="enqury")
+        ],[
+        InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    h=await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.BOT_TXT.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
+    await asyncio.sleep(50)
+    await h.delete()
+       
+@Client.on_message(filters.command("update"))
+async def update(update, message):
+    buttons = [[
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        ],[
+        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.UPDATE_CMD.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
@@ -361,6 +403,30 @@ async def delete_all_index_confirm(bot, message):
     await message.message.edit('Succesfully Deleted All The Indexed Files.')
 
 
+@Client.on_message(filters.command('total') & filters.user(ADMINS))
+async def total(bot, message):
+    """Show total files in database"""
+    msg = await message.reply("Processing...⏳", quote=True)
+    try:
+        total = await Media.count_documents()
+        await msg.edit(f'📁 Saved files: {total}')
+    except Exception as e:
+        logger.exception('Failed to check total files')
+        await msg.edit(f'Error: {e}')
+
+
+@Client.on_message(filters.private & filters.command("stats"))
+async def sts(c, m):
+    if m.from_user.id not in ADMIN_ID:
+        await m.delete()
+        return
+    await m.reply_text(
+        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`",
+        parse_mode="Markdown",
+        quote=True
+    )
+
+
 @Client.on_message(filters.command('settings'))
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
@@ -472,9 +538,7 @@ async def settings(client, message):
             parse_mode="html",
             reply_to_message_id=message.message_id
         )
-
-
-
+    
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
     sts = await message.reply("Checking template")
