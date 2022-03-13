@@ -245,11 +245,13 @@ async def start(client, message):
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "tip3": 
         await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+    elif query.data == "getmovie": 
+        await query.answer(f""" ➪ നിങ്ങൾ ബോട്ടിന്റെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്തിട്ടില്ല അതാണ് നിങ്ങൾക് സിനിമ കിട്ടാത്തത്  😃 \n\n ➪ മെയിൻ ചാനൽ link കിട്ടാൻ നിങ്ങൾ /clink എന്ന് മെസ്സേജ്  അയച്ചാൽ മതി 😁",show_alert=True)
 
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
     buttons = [[
-        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="tip3"),
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="getmovie"),
         InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ", callback_data="tip3")
         ],[
         InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="tip3"),
