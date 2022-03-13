@@ -247,6 +247,7 @@ async def bot(bot, message):
         InlineKeyboardButton("JOIN GROUP", url='t.me/farshadck'),
         InlineKeyboardButton("ADMIN", url='t.me/farshadck'),
     ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
         photo=random.choice(PICS),
         caption=script.BOT_TXT.format(message.from_user.mention),
