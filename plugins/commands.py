@@ -275,8 +275,8 @@ async def update(bot, message):
         reply_markup=reply_markup,
         parse_mode="html")
     
-@Client.on_message(filters.command("command"))
-async def command(bot, message):
+@Client.on_message(filters.command("cmd"))
+async def cmd(bot, message):
     buttons = [[
         InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
         ],[
