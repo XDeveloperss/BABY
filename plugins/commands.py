@@ -47,7 +47,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ JOIN CHANNEL ➕', url=f'https://t.me/moviesupdateck')            
+            InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         h = await message.reply_sticker(
@@ -88,7 +89,8 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ JOIN CHANNEL ➕', url=f'https://t.me/moviesupdateck')            
+            InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -240,6 +242,22 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
+
+@Client.on_message(filters.command("moviekittan"))
+async def moviekittan(bot, message):
+    buttons = [[
+        InlineKeyboardButton("ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ", url='t.me/cinemakodathi')
+        ],[
+        InlineKeyboardButton("ᴄɪɴᴇᴍᴀ ᴋᴏᴅᴀᴛʜɪ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    h=await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=script.MOVIE_KITTAN.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
+    await asyncio.sleep(50)
+    await h.delete()
 
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
