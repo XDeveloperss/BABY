@@ -427,9 +427,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
         await query.answer('Piracy Is Crime')
-    elif query.data == "serchmovies":
+    elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ᴄʟɪᴄᴋ ʜᴇʀᴇ', switch_inline_query_current_chat='')            
+            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
         ], [
             InlineKeyboardButton('Connection', callback_data='coct'),
             InlineKeyboardButton('Extra Mods', callback_data='extra')
