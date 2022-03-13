@@ -430,7 +430,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "mfk1":
         buttons = [[
-            InlineKeyboardButton('ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ', callback_data='moviekittan'),
+            InlineKeyboardButton('ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ', callback_data="moviekittan"),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ & ʜᴇʟᴩ', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -439,6 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+             
     elif query.data == "mfk2":
         buttons = [[
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ᴄʟɪᴄᴋ ʜᴇʀᴇ', switch_inline_query_current_chat='')
