@@ -274,7 +274,7 @@ async def bot(bot, message):
     await h.delete()
        
 @Client.on_message(filters.command("update"))
-async def update(update, message):
+async def update(bot, message):
     buttons = [[
         InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
         ],[
