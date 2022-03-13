@@ -267,7 +267,7 @@ async def bot(bot, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     h=await message.reply_photo(
         photo=random.choice(PICS),
-        caption=script.BOT_TXT.format(message.from_user.mention),
+        caption=script.UPDATE_CMD.format(message.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
     await asyncio.sleep(50)
