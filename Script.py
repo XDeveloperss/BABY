@@ -1,4 +1,33 @@
 class script(object):
+    CMD_LIST = """𝙷𝙴𝙻𝙾 {},
+• /id - get id of a specifed user. 
+ • /info  - get information about a user. 
+ • /imdb  - get the film information from IMDb source. 
+ • /search  - get the film information from various sources. 
+ • /whois :-give a user full details 
+
+ ᴛʜɪs ɪs ғᴏʀ ᴀᴅᴍɪɴs 
+
+• /logs - to get the rescent errors 
+• /stats - to get status of files in db. 
+• /delete - to delete a specific file from db. 
+• /users - to get list of my users and ids. 
+• /chats - to get list of the my chats and ids 
+• /leave  - to leave from a chat. 
+• /disable  -  do disable a chat. 
+• /ban  - to ban a user. 
+• /unban  - to unban a user. 
+• /channel - to get list of total connected channels 
+ • /broadcast - to broadcast a message to all users. 
+ • /connect  - connect a particular chat to your PM. 
+• /disconnect  - disconnect from a chat. 
+• /connections - list all your connections. 
+• /pin :- Pin The Message You Replied To Message To Send A Notification To Group Members. 
+• /unpin :- Unpin The Current Pinned Message. If Used As A Reply, Unpins The Replied To Message. 
+• /filter - add a filter in chat. 
+• /filters - list all the filters of a chat. 
+• /del - delete a specific filter in chat. 
+• /delall - delete the whole filters in a chat (chat owner only)"""
     BOT_TXT = """𝙷𝙴𝙻𝙾 {},
 ➪ എങ്ങനെ നിങ്ങൾക്ക് ഈ ബോട്ട് പ്രവർത്തിപ്പിക്കാം
  
