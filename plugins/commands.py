@@ -252,7 +252,7 @@ async def regex(bot, msg):
     reply_markup = InlineKeyboardMarkup(buttons)
     await msg.reply_photo(
         photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
-        caption=script.UPDATE_CMD.format(message.from_user.mention),
+        caption=script.UPDATE_CMD.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
 
