@@ -29,18 +29,3 @@ async def regex(bot, msg):
         parse_mode="html")
 
 
-@Client.on_callback_query()
-async def callback(bot, message: CallbackQuery):
-    if message.data == "f2001":
-        buttons = [[
-            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-N185Xy0xMDAxNjU3NjI5Mjg1Xy9iYXRjaA")                     
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo="https://telegra.ph/file/a19c66ea096312b05e2ba.jpg",
-            caption="🎬 Title: Fast & Furious 1/n📅 Year: 2001/n🎙️Language: English/n📊Rating: 6.8/10",
-            reply_markup=reply_markup,
-            parse_mode='html'
-        
-        )
-
