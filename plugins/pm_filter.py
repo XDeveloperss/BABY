@@ -465,6 +465,102 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         
         )
+    elif query.data == "f2006":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTNfMTZfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/c7b97d902e0b94dbfd50a.jpg",
+            caption="🎬 Title: Fast & Furious 3/n📅 Year: 2006/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2009":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTdfMTlfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/cb6f3644a2223a33c1df5.jpg",
+            caption="🎬 Title: Fast & Furious 4/n📅 Year: 2009/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2011":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MjBfMjJfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/d8cc66612de7d1d0ed4d3.jpg",
+            caption="🎬 Title: Fast & Furious 5/n📅 Year: 2011/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2013":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MjNfMjVfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/7fcde6e1c720a8a34ea83.jpg",
+            caption="🎬 Title: Fast & Furious 6/n📅 Year: 2013/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2015":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MjZfMjhfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/c3ea555fca167431cec36.jpg",
+            caption="🎬 Title: Fast & Furious 7/n📅 Year: 2015/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2017":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MjlfMzFfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/8450380165caa3b01c5cf.jpg",
+            caption="🎬 Title: Fast & Furious 8/n📅 Year: 2017/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2019":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MzJfMzRfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/8da4cfb40e535acf85055.jpg",
+            caption="🎬 Title: ast & Furious Presents: Hobbs & Shaw 3/n📅 Year: 2019/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "f2021":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MzVfNDBfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/8affe4898f81c38849fc5.jpg",
+            caption="🎬 Title: Fast & Furious 9/n📅 Year: 2021/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
              
     elif query.data == "mfk2":
         buttons = [[
