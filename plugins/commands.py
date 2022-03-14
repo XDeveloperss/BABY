@@ -250,7 +250,7 @@ async def regex(bot, msg):
         InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_photo(
+    await msg.reply_photo(
         photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
         caption=script.UPDATE_CMD.format(message.from_user.mention),
         reply_markup=reply_markup,
