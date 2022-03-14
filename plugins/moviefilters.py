@@ -35,6 +35,7 @@ async def callback(bot, msg: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-N185Xy0xMDAxNjU3NjI5Mjg1Xy9iYXRjaA")                     
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
         await msg.reply_photo(
             photo="https://telegra.ph/file/a19c66ea096312b05e2ba.jpg",
             caption="🎬 Title: Fast & Furious 1/n📅 Year: 2001/n🎙️Language: English/n📊Rating: 6.8/10"),
