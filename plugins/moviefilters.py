@@ -31,9 +31,9 @@ async def regex(bot, msg):
 @Client.on_message(filters.regex("MAHAAN") | filters.regex("mahaan") | filters.regex("Mahaan"))
 async def regex(bot, msg):
     buttons = [[
-        InlineKeyboardButton("🦋 MAHAAN MALAYALAM 🦋", url="https://t.me/lisacinemabot?start=BATCH-BQADBQADBAUAAu1ggFV4pqh8AyU4MhYE")
+        InlineKeyboardButton("🦋 MAHAAN MALAYALAM 🦋", url="https://t.me/lisamoviebot?start=DSTORE-NDFfNDRfLTEwMDE2NTc2MjkyODVfL2JhdGNo")
         ],[
-        InlineKeyboardButton("TAMIL", url="https://t.me/lisacinemabot?start=BATCH-BQADBQADBQUAAu1ggFUH3-UAAaQg4kAWBA")
+        InlineKeyboardButton("TAMIL", url="https://t.me/lisamoviebot?start=DSTORE-NDVfNDhfLTEwMDE2NTc2MjkyODVfL2JhdGNo")
         ],[
         InlineKeyboardButton("‼️ ALERT ‼️", callback_data="alert")
         ],[
