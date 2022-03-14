@@ -5,13 +5,15 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 @Client.on_message(filters.regex("hi"))
 async def regex(bot, msg):
     buttons = [[
-        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        InlineKeyboardButton("Fast and furious", callback_data="ftfuri")      
         ],[
         InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await msg.reply_photo(
-        photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
-        caption=script.UPDATE_CMD.format(msg.from_user.mention),
+        photo="https://telegra.ph/file/8f74216a74c06f881a670.jpg",
+        caption=script.FAST_FURI.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
+
+
