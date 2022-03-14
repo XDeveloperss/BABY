@@ -42,6 +42,5 @@ async def regex(bot, msg):
     reply_markup = InlineKeyboardMarkup(buttons)
     await msg.reply_sticker(
         sticker="CAACAgUAAxkBAAECGahiL6CDY53FYO4iRYXbu_ZXmtHvzAACLAUAAvv_KFQWafOBgNotdR4E",
-        reply_markup=reply_markup,
-        parse_mode="html"
+        reply_markup=reply_markup
     )
