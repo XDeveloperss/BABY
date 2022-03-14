@@ -1,6 +1,6 @@
 from Script import script
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @Client.on_message(filters.regex("hi"))
 async def regex(bot, msg):
@@ -41,5 +41,6 @@ async def callback(bot, msg: CallbackQuery):
             caption="🎬 Title: Fast & Furious 1/n📅 Year: 2001/n🎙️Language: English/n📊Rating: 6.8/10"),
             reply_markup=reply_markup,
             parse_mode='html'
+        
 
 
