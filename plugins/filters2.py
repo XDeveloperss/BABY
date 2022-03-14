@@ -1,6 +1,5 @@
 from pyrogram import Client, filters
-
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
 @Client.on_message(filters.regex("hello"))
 async def regex(bot, msg):
