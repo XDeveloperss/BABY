@@ -22,12 +22,29 @@ async def regex(bot, msg):
         InlineKeyboardButton("F9 The Fast Saga", callback_data="f2021")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    h=await msg.reply_photo(
+    await msg.reply_photo(
         photo="https://telegra.ph/file/8f74216a74c06f881a670.jpg",
         caption=script.FAST_FURI.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
-    await asyncio.sleep(150)
-    await h.delete()
-
-
+  
+@Client.on_message(filters.regex("MAHAAN") | filters.regex("mahaan") | filters.regex("Mahaan"))
+async def regex(bot, msg):
+    buttons = [[
+        InlineKeyboardButton("🦋 MAHAAN MALAYALAM 🦋", url="https://t.me/lisacinemabot?start=BATCH-BQADBQADBAUAAu1ggFV4pqh8AyU4MhYE")
+        ],[
+        InlineKeyboardButton("TAMIL", url="https://t.me/lisacinemabot?start=BATCH-BQADBQADBQUAAu1ggFUH3-UAAaQg4kAWBA")
+        ],[
+        InlineKeyboardButton("‼️ ALERT ‼️", callback_data="alert)
+        ],[
+        InlineKeyboardButton("🌀 Jᴏɪɴ ᴄʜᴀɴɴᴇL 🌀", url="https://t.me/moviesupdateck")
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_sticker(
+        sticker="CAACAgUAAxkBAAECGahiL6CDY53FYO4iRYXbu_ZXmtHvzAACLAUAAvv_KFQWafOBgNotdR4E",
+        caption="""🎬 Title : MAHAAN
+🗓 Year : 2022
+🔊 Language : #Malayalam #Tamil
+💿 Quality : HD"""),
+        reply_markup=reply_markup,
+        parse_mode="html")
