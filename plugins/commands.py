@@ -303,7 +303,7 @@ async def cmd(bot, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
         photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
-        caption=script.CMD_LIST.format(message.from_user.mention),
+        caption=script.START_TXT.format(message.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
 
