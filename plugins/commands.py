@@ -242,6 +242,19 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
+@Client.on_message(filters.regex("hello"))
+async def regex(bot, msg):
+    buttons = [[
+        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        ],[
+        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(
+        photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
+        caption=script.UPDATE_CMD.format(message.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
 
 @Client.on_message(filters.command("moviekittan"))
 async def moviekittan(bot, message):
