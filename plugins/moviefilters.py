@@ -35,7 +35,7 @@ async def regex(bot, msg):
         ],[
         InlineKeyboardButton("TAMIL", url="https://t.me/lisacinemabot?start=BATCH-BQADBQADBQUAAu1ggFUH3-UAAaQg4kAWBA")
         ],[
-        InlineKeyboardButton("‼️ ALERT ‼️", callback_data="alert)
+        InlineKeyboardButton("‼️ ALERT ‼️", callback_data="alert")
         ],[
         InlineKeyboardButton("🌀 Jᴏɪɴ ᴄʜᴀɴɴᴇL 🌀", url="https://t.me/moviesupdateck")
     ]]
