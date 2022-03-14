@@ -452,6 +452,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         
         )  
+
+    elif query.data == "f2003":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTBfMTJfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/3f495cd7b84543089e2cc.jpg",
+            caption="🎬 Title: 2 Fast 2 Furious 1/n📅 Year: 2003/n🎙️Language: English/n📊Rating: 6.8/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
              
     elif query.data == "mfk2":
         buttons = [[
