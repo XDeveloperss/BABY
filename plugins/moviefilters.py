@@ -44,4 +44,5 @@ async def regex(bot, msg):
         sticker="CAACAgUAAxkBAAECGahiL6CDY53FYO4iRYXbu_ZXmtHvzAACLAUAAvv_KFQWafOBgNotdR4E",
         caption="🎬 Title : MAHAAN /n 🗓 Year : 2022 /n 🔊 Language : #Malayalam #Tamil /n 💿 Quality : HD",
         reply_markup=reply_markup,
-        parse_mode="html")
+        parse_mode="html"
+    )
