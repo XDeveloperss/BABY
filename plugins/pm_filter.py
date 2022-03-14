@@ -839,7 +839,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply(f"""➪Hey👋 {message.from_user.mention} 
+    await msg.reply(f"""➪Hey👋 {msg.from_user.mention} 
 
 ➪I couldn't find anything related to that
 
