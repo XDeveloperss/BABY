@@ -288,7 +288,7 @@ async def update(bot, message):
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
-        photo=random.choice(PICS),
+        photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
         caption=script.UPDATE_CMD.format(message.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
