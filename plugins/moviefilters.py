@@ -22,10 +22,12 @@ async def regex(bot, msg):
         InlineKeyboardButton("F9 The Fast Saga", callback_data="f2021")
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await msg.reply_photo(
+    h=await msg.reply_photo(
         photo="https://telegra.ph/file/8f74216a74c06f881a670.jpg",
         caption=script.FAST_FURI.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
+    await asyncio.sleep(150)
+    await h.delete()
 
 
