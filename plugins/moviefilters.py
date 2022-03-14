@@ -29,7 +29,7 @@ async def regex(bot, msg):
         parse_mode="html")
 
 
-@farshad.on_callback_query()
+@Client.on_callback_query()
 async def callback(bot, msg: CallbackQuery):
     if msg.data == "f2001":
         buttons = [[
