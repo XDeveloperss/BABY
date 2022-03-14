@@ -1,5 +1,6 @@
 class script(object):
-    FAST_FURI = """🚗 FAST AND FURIOUS ENGLISH VERSION COLLECTIONS"""
+    FAST_FURI = """𝙷𝙴𝙻𝙾 {},
+🚗 FAST AND FURIOUS ENGLISH VERSION COLLECTIONS"""
     SERCH_MOVIE = """𝙷𝙴𝙻𝙾 {},
 നിങ്ങൾക്ക് അവശമുള്ള മൂവി ഇവിടെ സെർച്ച് ചെയ്യാം 
 
