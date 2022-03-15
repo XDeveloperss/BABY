@@ -1,4 +1,6 @@
 class script(object):
+    HOME_ALONE = """𝙷𝙴𝙻𝙾 {},
+🏠 HOME ALONE ENGLISH VERSION AND MULTI AUDIO COLLECTIONS"""
     FAST_FURI = """𝙷𝙴𝙻𝙾 {},
 🚗 FAST AND FURIOUS ENGLISH VERSION COLLECTIONS"""
     SERCH_MOVIE = """𝙷𝙴𝙻𝙾 {},
