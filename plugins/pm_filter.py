@@ -561,6 +561,79 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         
         )
+    elif query.data == "ha1":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-NTRfNThfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/d39128d12108a114625fd.jpg",
+            caption="🎬 Title: Home Alone 1 /n 📅 Year: 1990 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )  
+
+    elif query.data == "ha2":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-NTlfNjVfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/8beaabbd30f4dbf084f4e.jpg",
+            caption="🎬 Title: Home Alone 2 /n 📅 Year: 1992 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "ha3":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-NjZfNzFfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/e854ab3fdf212c4c154a0.jpg",
+            caption="🎬 Title: Home Alone 3 /n 📅 Year: 1997 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "ha4":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-NzJfNzZfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/97508660c08ed28f17823.jpg",
+            caption="🎬 Title: Home Alone 4 /n 📅 Year: 2002 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "ha5":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-NzdfODBfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/1d9db2e6c40d3e3e57992.jpg",
+            caption="🎬 Title: Home Alone 5 /n 📅 Year: 2012 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
+    elif query.data == "ha6":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-ODFfODZfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/da6e500bd6589feb2b7df.jpg",
+            caption="🎬 Title: Home Alone 6 /n 📅 Year: 2021 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        
+        )
              
     elif query.data == "mfk2":
         buttons = [[
