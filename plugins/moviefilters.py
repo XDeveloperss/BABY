@@ -44,3 +44,17 @@ async def mahaan(bot, msg):
         sticker="CAACAgUAAxkBAAECGahiL6CDY53FYO4iRYXbu_ZXmtHvzAACLAUAAvv_KFQWafOBgNotdR4E",
         reply_markup=reply_markup
     )
+@Client.on_message(filters.regex("JAN E MAN") | filters.regex("jan e man") | filters.regex("Jan e man") | filters.regex("Jan E Man"))
+async def regex(bot, msg):
+    buttons = [[
+        InlineKeyboardButton("🔘 JAN E MAN 🔘", url="https://t.me/lisamoviebot?start=DSTORE-NDlfNTNfLTEwMDE2NTc2MjkyODVfL2JhdGNo")
+        ],[
+        InlineKeyboardButton("‼️ ALERT ‼️", callback_data="art")
+        ],[
+        InlineKeyboardButton("🌀 Jᴏɪɴ ᴄʜᴀɴɴᴇL 🌀", url="https://t.me/moviesupdateck")
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_sticker(
+        sticker="CAACAgUAAxkBAAECGbViL-s5MJSgV4DmpZ0xG83RKZbdowAC2gQAAi5HqVR7BrHkcRQZ4B4E",
+        reply_markup=reply_markup
+    )
