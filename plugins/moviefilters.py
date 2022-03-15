@@ -35,7 +35,7 @@ async def home(bot, msg):
         ],[      
         InlineKeyboardButton("HA 1", callback_data="ha1"),
         InlineKeyboardButton("HA 2", callback_data="ha2"),
-        InlineKeyboardButton("HA 3", callback_data="hs3")
+        InlineKeyboardButton("HA 3", callback_data="ha3")
         ],[
         InlineKeyboardButton("HA 4", callback_data="ha4"),
         InlineKeyboardButton("HA 5", callback_data="ha5"),
