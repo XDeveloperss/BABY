@@ -599,10 +599,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/e854ab3fdf212c4c154a0.jpg",
-            caption="🎬 Title: Home Alone 3 
+            caption="""🎬 Title: Home Alone 3 
 📅 Year: 1997 
 🎙️Language: English Multi audio 
-📊Rating: 7.4/10",
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -614,10 +614,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/97508660c08ed28f17823.jpg",
-            caption="🎬 Title: Home Alone 4 
+            caption="""🎬 Title: Home Alone 4 
 📅 Year: 2002 
 🎙️Language: English Multi audio 
-📊Rating: 7.4/10",
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -629,10 +629,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/1d9db2e6c40d3e3e57992.jpg",
-            caption="🎬 Title: Home Alone 5 
+            caption="""🎬 Title: Home Alone 5 
 📅 Year: 2012 
 🎙️Language: English Multi audio 
-📊Rating: 7.4/10",
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -644,10 +644,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/da6e500bd6589feb2b7df.jpg",
-            caption="🎬 Title: Home Alone 6 
+            caption="""🎬 Title: Home Alone 6 
 📅 Year: 2021 
 🎙️Language: English Multi audio 
-📊Rating: 7.4/10",
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
