@@ -27,6 +27,26 @@ async def regex(bot, msg):
         caption=script.FAST_FURI.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
+
+@Client.on_message(filters.regex("HOME ALONE") | filters.regex("home alone") | filters.regex("Home Alone"))
+async def home(bot, msg):
+    buttons = [[
+        InlineKeyboardButton("🏠 HOME ALONE 🏠", callback_data="tip2")
+        ],[      
+        InlineKeyboardButton("HM 1", callback_data="f2001"),
+        InlineKeyboardButton("HM 2", callback_data="f2003"),
+        InlineKeyboardButton("HM 3", callback_data="f2006")
+        ],[
+        InlineKeyboardButton("HM 4", callback_data="f2009"),
+        InlineKeyboardButton("HM 5", callback_data="f2011"),
+        InlineKeyboardButton("HM 6", callback_data="f2013"),
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_photo(
+        photo="https://telegra.ph/file/8beaabbd30f4dbf084f4e.jpg",
+        caption=script.HOME_ALONE.format(msg.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
   
 @Client.on_message(filters.regex("MAHAAN") | filters.regex("mahaan") | filters.regex("Mahaan"))
 async def mahaan(bot, msg):
