@@ -568,7 +568,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/d39128d12108a114625fd.jpg",
-            caption="🎬 Title: Home Alone 1 /n 📅 Year: 1990 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="""🎬 Title: Home Alone 1 
+📅 Year: 1990 
+🎙️Language: English Multi audio
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -581,7 +584,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/8beaabbd30f4dbf084f4e.jpg",
-            caption="🎬 Title: Home Alone 2 /n 📅 Year: 1992 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="""🎬 Title: Home Alone 2 
+📅 Year: 1992 
+🎙️Language: English Multi audio 
+📊Rating: 7.4/10""",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -593,7 +599,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/e854ab3fdf212c4c154a0.jpg",
-            caption="🎬 Title: Home Alone 3 /n 📅 Year: 1997 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="🎬 Title: Home Alone 3 
+📅 Year: 1997 
+🎙️Language: English Multi audio 
+📊Rating: 7.4/10",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -605,7 +614,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/97508660c08ed28f17823.jpg",
-            caption="🎬 Title: Home Alone 4 /n 📅 Year: 2002 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="🎬 Title: Home Alone 4 
+📅 Year: 2002 
+🎙️Language: English Multi audio 
+📊Rating: 7.4/10",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -617,7 +629,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/1d9db2e6c40d3e3e57992.jpg",
-            caption="🎬 Title: Home Alone 5 /n 📅 Year: 2012 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="🎬 Title: Home Alone 5 
+📅 Year: 2012 
+🎙️Language: English Multi audio 
+📊Rating: 7.4/10",
             reply_markup=reply_markup,
             parse_mode='html'
         
@@ -629,7 +644,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.reply_photo(
             photo="https://telegra.ph/file/da6e500bd6589feb2b7df.jpg",
-            caption="🎬 Title: Home Alone 6 /n 📅 Year: 2021 /n 🎙️Language: English Multi audio /n 📊Rating: 7.4/10",
+            caption="🎬 Title: Home Alone 6 
+📅 Year: 2021 
+🎙️Language: English Multi audio 
+📊Rating: 7.4/10",
             reply_markup=reply_markup,
             parse_mode='html'
         
