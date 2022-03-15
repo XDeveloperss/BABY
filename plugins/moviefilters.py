@@ -33,13 +33,15 @@ async def home(bot, msg):
     buttons = [[
         InlineKeyboardButton("🏠 HOME ALONE 🏠", callback_data="tip2")
         ],[      
-        InlineKeyboardButton("HM 1", callback_data="f2001"),
-        InlineKeyboardButton("HM 2", callback_data="f2003"),
-        InlineKeyboardButton("HM 3", callback_data="f2006")
+        InlineKeyboardButton("HA 1", callback_data="ha1"),
+        InlineKeyboardButton("HA 2", callback_data="ha2"),
+        InlineKeyboardButton("HA 3", callback_data="hs3")
         ],[
-        InlineKeyboardButton("HM 4", callback_data="f2009"),
-        InlineKeyboardButton("HM 5", callback_data="f2011"),
-        InlineKeyboardButton("HM 6", callback_data="f2013"),
+        InlineKeyboardButton("HA 4", callback_data="ha4"),
+        InlineKeyboardButton("HA 5", callback_data="ha5"),
+        InlineKeyboardButton("HA 6", callback_data="ha6")
+        ],[
+        InlineKeyboardButton('CLOSE 🗑', callback_data='close_data')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await msg.reply_photo(
