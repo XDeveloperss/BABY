@@ -652,6 +652,97 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         
         )
+    elif query.data == "vk1":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-ODdfOTdfLTEwMDE2NTc2MjkyODVfL2JhdGNo")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 01 
+📅 Year: 2013
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk2":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-OThfMTA5Xy0xMDAxNjU3NjI5Mjg1Xy9iYXRjaA")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 02 
+📅 Year: 2014
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk3":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTEwXzEyMV8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 03 
+📅 Year: 2015
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk4":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTIyXzE0M18tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 04 
+📅 Year: 2017
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk5":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/c/1657629285/166")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 05 
+📅 Year: 2019
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk6":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTY3XzE3OF8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 06 
+📅 Year: 2020
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
+    elif query.data == "vk7":
+        buttons = [[
+            InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTc5XzIyMl8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_photo(
+            photo="https://telegra.ph/file/751866aa416b3195d029c.jpg",
+            caption="""🎬 Title: VIKINGS 06 PART B
+📅 Year: 2020
+🎙️Language: English & Multi audio 
+📊Rating: 9.4/80""",
+            reply_markup=reply_markup,
+            parse_mode='html'
              
     elif query.data == "mfk2":
         buttons = [[
