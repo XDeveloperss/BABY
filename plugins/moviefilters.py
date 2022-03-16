@@ -28,7 +28,7 @@ async def regex(bot, msg):
         reply_markup=reply_markup,
         parse_mode="html")
 
-@Client.on_message(filters.regex("HOME ALONE") | filters.regex("home alone") | filters.regex("Home Alone"))
+@Client.on_message(filters.regex("HOME ALONE") | filters.regex("Home alone") | filters.regex("Home Alone"))
 async def home(bot, msg):
     buttons = [[
         InlineKeyboardButton("🏠 HOME ALONE 🏠", callback_data="tip2")
@@ -47,6 +47,29 @@ async def home(bot, msg):
     await msg.reply_photo(
         photo="https://telegra.ph/file/8beaabbd30f4dbf084f4e.jpg",
         caption=script.HOME_ALONE.format(msg.from_user.mention),
+        reply_markup=reply_markup,
+        parse_mode="html")
+@Client.on_message(filters.regex("VIKINGS") | filters.regex("vikings") | filters.regex("Vikings"))
+async def regex(bot, msg):
+    buttons = [[
+        InlineKeyboardButton("🌟 VIKINGS COLLECTION 🌟", callback_data="tip2")
+        ],[      
+        InlineKeyboardButton("❗️S 01❗️", callback_data="vk1"),
+        InlineKeyboardButton("❕S 02❕", callback_data="vk2"),
+        InlineKeyboardButton("❗️S 03❗️", callback_data="vk3")
+        ],[
+        InlineKeyboardButton("❕S 04❕", callback_data="vk4"),
+        InlineKeyboardButton("❗️S 05❗️", callback_data="vk5"),
+        InlineKeyboardButton("❕S 06❕", callback_data="vk6")
+        ],[
+        InlineKeyboardButton("❗️SEASON 06 [ PART B ]❗️", callback_data="vk7")
+        ],[
+        InlineKeyboardButton('CLOSE 🗑', callback_data='close_data')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_photo(
+        photo="https://telegra.ph/file/99ab7f0b438f320635db3.jpg",
+        caption=script.VIKIN_GS.format(msg.from_user.mention),
         reply_markup=reply_markup,
         parse_mode="html")
   
