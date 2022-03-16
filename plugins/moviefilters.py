@@ -50,7 +50,7 @@ async def home(bot, msg):
         reply_markup=reply_markup,
         parse_mode="html")
 @Client.on_message(filters.regex("VIKINGS") | filters.regex("vikings") | filters.regex("Vikings"))
-async def regex(bot, msg):
+async def vikings(bot, msg):
     buttons = [[
         InlineKeyboardButton("🌟 VIKINGS COLLECTION 🌟", callback_data="tip2")
         ],[      
