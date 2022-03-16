@@ -1,4 +1,6 @@
 class script(object):
+    VIKIN_GS = """𝙷𝙴𝙻𝙾 {},
+🌟 VIKINGS ENGLISH VERSION AND MULTI AUDIO COLLECTIONS"""
     HOME_ALONE = """𝙷𝙴𝙻𝙾 {},
 🏠 HOME ALONE ENGLISH VERSION AND MULTI AUDIO COLLECTIONS"""
     FAST_FURI = """𝙷𝙴𝙻𝙾 {},
