@@ -665,6 +665,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk2":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-OThfMTA5Xy0xMDAxNjU3NjI5Mjg1Xy9iYXRjaA")                     
@@ -678,6 +679,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk3":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTEwXzEyMV8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
@@ -691,6 +693,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk4":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTIyXzE0M18tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
@@ -704,6 +707,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk5":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/c/1657629285/166")                     
@@ -717,6 +721,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk6":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTY3XzE3OF8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
@@ -730,6 +735,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
     elif query.data == "vk7":
         buttons = [[
             InlineKeyboardButton('🔰 DOWNLOAD 🔰', url="https://t.me/lisamoviebot?start=DSTORE-MTc5XzIyMl8tMTAwMTY1NzYyOTI4NV8vYmF0Y2g")                     
@@ -743,6 +749,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 📊Rating: 9.4/80""",
             reply_markup=reply_markup,
             parse_mode='html'
+        )
              
     elif query.data == "mfk2":
         buttons = [[
