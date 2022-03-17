@@ -73,7 +73,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"📂{get_size(file.file_size)} 📂{file.file_name}", callback_data="filter1"
+                    text=f"📂{get_size(file.file_size)} 📂{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -411,34 +411,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "tip2": 
         await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
-    elif query.data == "filter1":
-        btn = [
-            [
-                InlineKeyboardButton('🔰 Download Link 🔰', callback_data=f'files#{file.file_id}'
-                ),
-            ]
-            for file in files
-        ]
-    else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
-                ),
-                InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    callback_data=f'files_#{file.file_id}',
-                ),
-            ]
-            for file in files
-        ]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
     
 #boutton new add akkiye
     elif query.data == "pages":
@@ -1025,7 +997,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"📂{get_size(file.file_size)} 📂{file.file_name}", callback_data="filter1"
+                    text=f"📂{get_size(file.file_size)} 📂{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
