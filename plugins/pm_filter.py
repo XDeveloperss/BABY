@@ -328,7 +328,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 "Your connected group details ;\n\n",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
-    msg1 = await query.message.reply(
+            msg1 = await query.message.reply(
                 f'<b>File Name: {title}</b>\n\n'
                 f'<b>File Size: {size}</b>\n\n'
                 '<code>THis file will be deleted in 5 minutes.!</code>',
