@@ -251,6 +251,7 @@ async def moviekittan(bot, message):
         InlineKeyboardButton("ᴄɪɴᴇᴍᴀ ᴋᴏᴅᴀᴛʜɪ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await message.action(typing)
     h=await message.reply_photo(
         photo=random.choice(PICS),
         caption=script.MOVIE_KITTAN.format(message.from_user.mention),
@@ -271,6 +272,7 @@ async def bot(bot, message):
         InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await message.action(typing)
     h=await message.reply_photo(
         photo=random.choice(PICS),
         caption=script.BOT_TXT.format(message.from_user.mention),
