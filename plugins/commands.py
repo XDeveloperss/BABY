@@ -262,7 +262,6 @@ async def moviekittan(bot, message):
 
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
-    await message.action(typing)
     buttons = [[
         InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="getmovie"),
         InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ", callback_data="searchfile")
@@ -273,6 +272,7 @@ async def bot(bot, message):
         InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await message.action(typing)
     h=await message.reply_photo(
         photo=random.choice(PICS),
         caption=script.BOT_TXT.format(message.from_user.mention),
