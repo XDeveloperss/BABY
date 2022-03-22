@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @Client.on_message(filters.regex("FAST AND FURIOUS") | filters.regex("Fast And Furious") | filters.regex("fast and furious"))
-async def regex(bot, msg):
+async def fast(bot, msg):
     buttons = [[
         InlineKeyboardButton("Fast and furious", callback_data="tip2")
         ],[      
@@ -44,6 +44,7 @@ async def home(bot, msg):
         InlineKeyboardButton('CLOSE 🗑', callback_data='close_data')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_chat_action("typing")
     await msg.reply_photo(
         photo="https://telegra.ph/file/8beaabbd30f4dbf084f4e.jpg",
         caption=script.HOME_ALONE.format(msg.from_user.mention),
@@ -67,6 +68,7 @@ async def vikings(bot, msg):
         InlineKeyboardButton('CLOSE 🗑', callback_data='close_data')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await msg.reply_chat_action("typing")
     await msg.reply_photo(
         photo="https://telegra.ph/file/99ab7f0b438f320635db3.jpg",
         caption=script.VIKIN_GS.format(msg.from_user.mention),
