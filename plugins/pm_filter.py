@@ -752,7 +752,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     
-    elif query.data == "mfk2":   
+    elif query.data == "moviekittan":   
         buttons = [[
         InlineKeyboardButton("ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ", url='t.me/cinemakodathi')
         ],[
