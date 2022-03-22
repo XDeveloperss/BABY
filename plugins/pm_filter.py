@@ -765,7 +765,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
 
-      
     elif query.data == "mfk2":
         buttons = [[
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ᴄʟɪᴄᴋ ʜᴇʀᴇ', switch_inline_query_current_chat='')
