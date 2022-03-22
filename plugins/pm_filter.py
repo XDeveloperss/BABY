@@ -422,19 +422,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("typing")
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
     elif query.data == "mfk1":
         buttons = [[
             InlineKeyboardButton('ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ', callback_data="moviekittan"),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ & ʜᴇʟᴩ', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_chat_action("typing")
         await query.message.edit_text(
             text=script.MFK_1.format(query.from_user.mention),
             reply_markup=reply_markup,
