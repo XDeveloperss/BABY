@@ -435,7 +435,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴀʙᴏᴜᴛ & ʜᴇʟᴩ', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_chat_action("typing")
         await query.message.edit_text(
             text=script.MFK_1.format(query.from_user.mention),
             reply_markup=reply_markup,
