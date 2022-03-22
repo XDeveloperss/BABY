@@ -751,7 +751,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-             
+    
+    elif query.data == "mfk2":   
+        buttons = [[
+        InlineKeyboardButton("ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ", url='t.me/cinemakodathi')
+        ],[
+        InlineKeyboardButton("ᴄɪɴᴇᴍᴀ ᴋᴏᴅᴀᴛʜɪ", url='t.me/cinemakodathi')
+    ]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    await query.message.edit_text(
+            text=script.MOVIE_KITTAN.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+
+      
     elif query.data == "mfk2":
         buttons = [[
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ ᴄʟɪᴄᴋ ʜᴇʀᴇ', switch_inline_query_current_chat='')
