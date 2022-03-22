@@ -21,6 +21,7 @@ BATCH_FILES = {}
 ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(bot, message):
+    await message.reply_chat_action("playing a game")
     await msg.reply_sticker(
         sticker="CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ")
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
@@ -55,6 +56,7 @@ async def start(client, message):
                 sticker= "CAACAgUAAxkBAAECF0piLNbfO-DbF5RWSs42nw-ZnPQakQACfgAD56Y5LabCk8KC6v9jHgQ")
         await asyncio.sleep(2)
         await h.delete()
+        await message.reply_chat_action("typing")
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -289,6 +291,7 @@ async def update(bot, message):
         InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_chat_action("typing")
     await message.reply_photo(
         photo="https://telegra.ph/file/028b840597616b48ac356.jpg",
         caption=script.UPDATE_CMD.format(message.from_user.mention),
