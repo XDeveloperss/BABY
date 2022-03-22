@@ -272,7 +272,7 @@ async def bot(bot, message):
         InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.action(typing)
+    await message.action("typing")
     h=await message.reply_photo(
         photo=random.choice(PICS),
         caption=script.BOT_TXT.format(message.from_user.mention),
