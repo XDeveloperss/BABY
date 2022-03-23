@@ -31,7 +31,7 @@ ch_filter = environ.get('CH_FILTER')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-CH_FILTERS = int(ch_filter) if ch_filter and id_pattern.search(ch_filter) else None
+CH_FILTER = int(ch_filter) if ch_filter and id_pattern.search(ch_filter) else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
