@@ -1091,6 +1091,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
+        photo = "https://telegra.ph/file/871b2208d1857afa70a03.jpg"
         cap = f"""Hey 👋 {message.from_user.mention}😍
 
  📁 ғᴏᴜɴᴅ ✨ ғɪʟᴇs ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ : <code>#{search}</code>"""
