@@ -393,7 +393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
             )
             await query.answer('Check Out The Chat',show_alert=True)
-            await asyncio.sleep(999)
+            await asyncio.sleep(115)
             await msg1.delete()
             await msg.delete()
             del msg1, msg
