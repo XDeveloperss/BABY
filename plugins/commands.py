@@ -49,7 +49,9 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
-            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
+            ],[
+            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/farshadck")          
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         h = await message.reply_sticker(
@@ -92,7 +94,9 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
-            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2")           
+            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
+            ],[
+            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/farshadck")                  
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
