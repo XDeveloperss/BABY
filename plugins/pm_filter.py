@@ -369,7 +369,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                 await client.send_cached_media(
-                    chat_id=query.from_user.id,
+                    chat_id=AUTH_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
@@ -386,7 +386,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                             InlineKeyboardButton('🔥 GET FILE 🔥', url = "https://t.me/+QA4a_yQLMXplOThl")
                         ],
                         [
-                            InlineKeyboardButton('Close ❌', callback_data='close')
+                            InlineKeyboardButton('Close ❌', callback_data='close_data')
                         ]
                     ]
                 )
@@ -424,7 +424,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         await query.answer()
         await client.send_cached_media(
-            chat_id=query.from_user.id,
+            chat_id=AUTH_CHANNEL,
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False
