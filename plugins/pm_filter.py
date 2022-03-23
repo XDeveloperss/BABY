@@ -385,10 +385,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('🔰Download Link🔰', url = "https://t.me/moviesupdateck/{file_id}")
+                            InlineKeyboardButton('🔰𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐍𝐎𝐖🔰', url = "https://t.me/moviesupdateck/{file_id}")
                         ],
                         [
-                            InlineKeyboardButton('⚠️ Can't Access❓Click Here ⚠️', url = "https://t.me/+QA4a_yQLMXplOThl")
+                            InlineKeyboardButton('⚠️ 𝐂𝐚𝐧'𝐭 𝐀𝐜𝐜𝐞𝐬𝐬❓𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞 ⚠️', url = "https://t.me/+QA4a_yQLMXplOThl")
                         ]
                     ]
                 )
