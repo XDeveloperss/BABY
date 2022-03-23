@@ -29,6 +29,8 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 
+NORGE_IMG = f"https://telegra.ph/file/1616bc34ec34c9d74b5d2.jpg"
+
 
 IMDB_TEMPLATE = """<b>🏷 Title</b>: <a href={url}>{title}</a>
 🎭 Genres: {genres}
@@ -1114,7 +1116,7 @@ async def auto_filter(client, msg, spoll=False):
  📁 ғᴏᴜɴᴅ ✨ ғɪʟᴇs ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ : <code>#{search}</code>"""
     if imdb and imdb.get('poster'):
         try:
-            joelkb = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            joelkb = await message.reply_photo(photo=NORGE_IMG = f"https://telegra.ph/file/1616bc34ec34c9d74b5d2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(2000)
             await joelkb.edit(f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> Cʟᴏsᴇᴅ 🗑️")
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
