@@ -373,6 +373,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
+                await asyncio.sleep(3600)
+                await ms.delete()
+                del ms
                 )
                 msg1 = await query.message.reply(
                 f'<b>📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n\n'
