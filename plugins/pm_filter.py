@@ -374,13 +374,32 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check PM, I have sent files in pm', show_alert=True)
-        except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
-        except PeerIdInvalid:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                msg1 = await query.message.reply(
+                f'<b>File Name: {title}</b>\n\n'
+                f'<b>File Size: {size}</b>\n\n'
+                '<code>THis file will be deleted in 5 minutes.!</code>',
+                True,
+                'html',
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton('🔥 GET FILE 🔥', url = msg.link)
+                        ],
+                        [
+                            InlineKeyboardButton('Close ❌', callback_data='close')
+                        ]
+                    ]
+                )
+            )
+            await query.answer('Check Out The Chat',)
+            await asyncio.sleep(DELETE_TIME)
+            await msg1.delete()
+            await msg.delete()
+            del msg1, msg
         except Exception as e:
-            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            logger.exception(e, exc_info=True)
+            await query.answer(f"Encountering Issues", True)
+
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
             await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒", show_alert=True)
