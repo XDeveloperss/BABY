@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('🔥 GET FILE 🔥', url = "https://t.me/+QA4a_yQLMXplOThl")
+                            InlineKeyboardButton('🔥 GET FILE 🔥', url = "https://t.me/moviesupdateck_{file_id}")
                         ],
                         [
                             InlineKeyboardButton('Close ❌', callback_data='close_data')
@@ -391,7 +391,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ]
                 )
             )
-            await query.answer('Check Out The Chat',)
+            await query.answer('Check Out The Chat',show_alert=True)
             await asyncio.sleep(DELETE_TIME)
             await msg1.delete()
             await msg.delete()
