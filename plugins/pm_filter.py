@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('🔥 GET FILE 🔥', url = "https://t.me/moviesupdateck_{file_id}")
+                            InlineKeyboardButton('🔥 GET FILE 🔥', url = "https://t.me/moviesupdateck/{file_id}")
                         ],
                         [
                             InlineKeyboardButton('Close ❌', callback_data='close_data')
