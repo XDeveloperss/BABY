@@ -1123,7 +1123,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         cap = f"""Hey 👋 {message.from_user.mention}😍
 
- 📁 ғᴏᴜɴᴅ ✨ ғɪʟᴇs ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ : <code>#{search}</code>"""
+ 📁 ғᴏᴜɴᴅ ✨ ғɪʟᴇs ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ : #{search} 👇"""
     if imdb and imdb.get('poster'):
         try:
             joelkb = await message.reply_photo(photo=NORGE_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
