@@ -259,6 +259,20 @@ async def report(bot, message):
              await message.reply_text("<b>Use this command as the reply of any Message to Report</b>")
 
 
+                          
+@Client.on_message(filters.command('send') & filters.private)
+async def send(bot, message):
+    if message.from_user.id == ADMINS: 
+               if message.reply_to_message:
+                                    chatid=int(message.text.replace("/send"," "))
+                                    await bot.copy_message(chat_id=chatid, from_chat_id=ADMIN, message_id=message.reply_to_message.message_id)
+                                    await message.reply_text("<b>✅ Message Successfully Send to the Group</b>")
+               else:
+                    await message.reply_text("<b>Use this command as the reply of any Message to Send in Group</b>")                         
+    else:
+         await message.reply_text("<b>That's not for you bruh 😅</b>")
+
+
 @Client.on_message(filters.command("moviekittan"))
 async def moviekittan(bot, message):
     buttons = [[
