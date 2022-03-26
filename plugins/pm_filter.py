@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<b>📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n\n'
                 f'<b>🎬 Mᴏᴠɪᴇ Nᴀᴍᴇ: {title}</b>\n\n'
                 f'<b>⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ: {size}</b>\n\n'
-                f'<b>📂 Mᴏᴠɪᴇ Tʏᴘᴇ: {type}</b>\n\n'
+                f'<b>📂 Mᴏᴠɪᴇ Tʏᴘᴇ: {filetype}</b>\n\n'
                 '<code>THis file will be deleted in 5 minutes.!</code>',
                 True,
                 'html',
