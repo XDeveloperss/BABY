@@ -252,7 +252,7 @@ async def start(client, message):
 async def report_user(bot, message):
     if message.reply_to_message:
         chat_id = message.chat.id
-        reporter = str(message.from_user.id)
+        reporter = f"str{message.from_user.id}" 
         mention = message.from_user.mention
         admins = await bot.get_chat_members(chat_id=chat_id, filter="administrators")
         success = True
