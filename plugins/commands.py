@@ -249,7 +249,7 @@ async def start(client, message):
         protect_content=True if pre == 'filep' else False,
         )
 @Client.on_message((filters.command(["report"]) | filters.regex("@admins") | filters.regex("@admin")) & filters.group)
-async def report_user(bot, message):
+async def report(bot, message):
     if message.reply_to_message:
         chat_id = message.chat.id
         reporter = str(message.from_user.id) 
