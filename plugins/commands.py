@@ -34,11 +34,11 @@ async def start(client, message):
         your_now = now.astimezone(tz)
         hour = your_now.hour
         if 0 <= hour <12:
-            greeting="goodmorning"
+            greeting = "goodmorning"
         elif 12 <= hour <17:
-               greeting='good afternoon'
+               greeting = 'good afternoon'
         else:
-             greeting='good evening'
+             greeting = 'good evening'
         buttons = [
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
