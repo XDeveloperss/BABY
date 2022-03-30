@@ -29,7 +29,6 @@ async def start(bot, message):
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
-    if len(message.command) != 2:
         now = datetime.datetime.now()
         tz = pytz.timezone('asia/kolkata')
         your_now = now.astimezone(tz)
