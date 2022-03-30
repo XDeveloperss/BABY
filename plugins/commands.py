@@ -29,16 +29,16 @@ async def start(bot, message):
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
-        now = datetime.datetime.now()
-        tz = pytz.timezone('asia/kolkata')
-        your_now = now.astimezone(tz)
-        hour = your_now.hour
-        if 0 <= hour <12:
-            greeting = "goodmorning"
-        elif 12 <= hour <17:
-               greeting = 'good afternoon'
-        else:
-             greeting = 'good evening'
+    now = datetime.datetime.now()
+    tz = pytz.timezone('asia/kolkata')
+    your_now = now.astimezone(tz)
+    hour = your_now.hour
+    if 0 <= hour <12:
+        get = "goodmorning"
+    elif 12 <= hour <17:
+        get = 'good afternoon'
+    else:
+        get = 'good evening'
         buttons = [
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
@@ -73,7 +73,7 @@ async def start(client, message):
         await message.reply_chat_action("typing")
         await message.reply_photo(
             photo=random.choice(PICS),
-            caption=script.START_TXT.format(greeting, message.from_user.mention, temp.U_NAME, temp.B_NAME),
+            caption=script.START_TXT.format(get, message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
