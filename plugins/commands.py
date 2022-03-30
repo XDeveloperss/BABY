@@ -29,16 +29,6 @@ async def start(bot, message):
 @Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
-    now = datetime.datetime.now()
-    tz = pytz.timezone('asia/kolkata')
-    your_now = now.astimezone(tz)
-    hour = your_now.hour
-    if 0 <= hour <12:
-        get = "goodmorning"
-    elif 12 <= hour <17:
-        get = 'good afternoon'
-    else:
-        get = 'good evening'
         buttons = [
             [
                 InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
@@ -59,6 +49,16 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
+        now = datetime.datetime.now()
+        tz = pytz.timezone('asia/kolkata')
+        your_now = now.astimezone(tz)
+        hour = your_now.hour
+        if 0 <= hour <12:
+            get = "goodmorning"
+        elif 12 <= hour <17:
+            get = 'good afternoon'
+        else:
+            get = 'good evening'
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
