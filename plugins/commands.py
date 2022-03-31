@@ -54,11 +54,11 @@ async def start(client, message):
         your_now = now.astimezone(tz)
         hour = your_now.hour
         if 0 <= hour <12:
-            get = "goodmorning"
+            get = "Gᴏᴏᴅ ᴍᴏʀɴɪɴɢ"
         elif 12 <= hour <17:
-            get = 'good afternoon'
+            get = 'Gᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ'
         else:
-            get = 'good evening'
+            get = 'Gᴏᴏᴅ ᴇᴠᴇɴɪɴɢ'
         buttons = [[
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
