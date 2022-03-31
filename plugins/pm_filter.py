@@ -153,6 +153,24 @@ async def advantage_spoll_choker(bot, query):
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ</b>"
+        )
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ</b>⭗ ⭗ ⭗ ⭗ ⭗ ⭗"
+        )
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ</b>⦿ ⦿ ⦿ ⭗ ⭗ ⭗"
+        )
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ</b>⦿ ⦿ ⦿ ⦿ ⭗ ⭗"
+        )
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ 𝙸𝙽 𝙿𝚁𝙾𝙶𝚁𝙴𝚂𝚂</b>⦿ ⦿ ⦿ ⦿ ⦿ ⭗"
+        )
+        await msg.message.edit(
+            text="<b>Cʟᴏꜱɪɴɢ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ</b>⦿ ⦿ ⦿ ⦿ ⦿ ⦿"
+        )
         await query.message.delete()
     elif query.data == "delallconfirm":
         userid = query.from_user.id
