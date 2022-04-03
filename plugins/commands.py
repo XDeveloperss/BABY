@@ -99,7 +99,7 @@ async def start(client, message):
         await client.send_sticker(
             sticker="CAACAgQAAxkBAAJQzmIZo8u3pHF8ulLUGT7dUeIjAAF78QACVQADjRtGJ-yIezShSzCbHgQ", 
            chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            caption="**Please Join My Updates Channel to use this Bot!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
