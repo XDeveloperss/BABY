@@ -460,6 +460,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "tip2": 
         await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+    elif query.data == "sub": 
+        await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • ഗ്രൂപ്പിൽ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
     
 #boutton new add akkiye
     elif query.data == "pages":
