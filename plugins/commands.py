@@ -5,7 +5,7 @@ import asyncio
 from Script import script
 from pyrogram import Client, filters
 from pyrogram.errors import ChatAdminRequired, FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message, User
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
@@ -260,16 +260,23 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-@Client.on_message((filters.command(["report"]) | filters.regex("@admins") | filters.regex("@admin")) & filters.group)
+@Client.on_message(
+    (
+        filters.command(["report"]) |
+        filters.regex("@admins") |
+        filters.regex("@admin")
+    ) &
+    filters.group
+)
 async def report(bot, message):
     if message.reply_to_message:
         chat_id = message.chat.id
-        reporter = str(message.from_user.id) 
+        reporter = str(message.from_user.id)
         mention = message.from_user.mention
         admins = await bot.get_chat_members(chat_id=chat_id, filter="administrators")
-        success = True
-        report = f"𝖱𝖾𝗉𝗈𝗋𝗍𝖾𝗋 : {mention} ({reporter})" + "\n"
-        report += f"𝖬𝖾𝗌𝗌𝖺𝗀𝖾 : {message.reply_to_message.link}"
+        success = False
+        report = f"Reporter : {mention} ({reporter})" + "\n"
+        report += f"Message : {message.reply_to_message.link}"
         for admin in admins:
             try:
                 reported_post = await message.reply_to_message.forward(admin.user.id)
@@ -282,7 +289,8 @@ async def report(bot, message):
             except:
                 pass
         if success:
-            await message.reply_text("✅ Your Report Successfully Submitted to the Admins")
+            await message.reply_text("**Reported to Admins!**")
+
 
 @Client.on_message(filters.command("moviekittan"))
 async def moviekittan(bot, message):
