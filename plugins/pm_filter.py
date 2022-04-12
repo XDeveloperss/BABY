@@ -1106,7 +1106,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="⭕️ 𝗝𝗢𝗜𝗡 𝗠𝗬 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ⭕️",url="https://t.me/moviesupdateck")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text=f"🔮 {msg.text} ",callback_data="mfk"),
+            [InlineKeyboardButton(text=f"🔮 {msg.text} ",callback_data="imd_alert"),
              InlineKeyboardButton(text=f"🗂 {total_results} ",callback_data="tip2")]
         )
     else:
@@ -1117,7 +1117,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="⭕️ 𝗝𝗢𝗜𝗡 𝗠𝗬 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 ⭕️",url="https://t.me/moviesupdateck")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text=f"🔮 {msg.text} ",callback_data="mfk"),
+            [InlineKeyboardButton(text=f"🔮 {msg.text} ",callback_data="imd_alert"),
              InlineKeyboardButton(text=f"🗂 {total_results} ",callback_data="tip2")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
