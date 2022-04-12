@@ -462,7 +462,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
     elif query.data == "sub": 
         await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • ഗ്രൂപ്പിൽ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
-    elif query.data == "mfk": 
+    elif query.data == "imd_alert":
+        imdb = await get_poster(query.message.reply_to_message.text)
         await query.answer(f"""🏷 Title: {imdb['title']} 
 🎭 Genres: {imdb['genres']} 
 📆 Year: {imdb['year']} 
