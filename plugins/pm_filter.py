@@ -1176,7 +1176,7 @@ async def auto_filter(client, msg, spoll=False):
 
 
 
-async def advantage_spell_chok(bot, update: CallbackQuery):
+async def advantage_spell_chok(msg):
     #Callback Function for instructions when no results are available
    
    global VERIFY
