@@ -1,8 +1,0 @@
-name: cli
-image: okteto/golang:1
-command: bash
-workdir: Dockerfile
-volumes:
-  - /go/pkg/
-  - /root/.cache/go-build/
-autocreate: true
