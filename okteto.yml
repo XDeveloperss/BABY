@@ -1,7 +1,7 @@
 name: cli
 image: okteto/golang:1
 command: bash
-workdir: /BABY
+workdir: Dockerfile
 volumes:
   - /go/pkg/
   - /root/.cache/go-build/
