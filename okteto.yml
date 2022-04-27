@@ -1,0 +1,8 @@
+name: cli
+image: okteto/golang:1
+command: bash
+workdir: /BABY
+volumes:
+  - /go/pkg/
+  - /root/.cache/go-build/
+autocreate: true
