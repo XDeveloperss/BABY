@@ -75,6 +75,9 @@ python3 bot.py
 </p>
 </details>
 
+Deploy to railway
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/IuAQjm?referralCode=LIv_N2)
 
 ## Commands
 ```
