@@ -375,7 +375,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                                        file_caption='' if f_caption is None else f_caption)
 
                 buttons = [[
-                  InlineKeyboardButton('JOIN GROUP', url='https://t.me/cinemakodathi')
+                  InlineKeyboardButton('JOIN GROUP', url='https://t.me/tvserieshomenew')
                   ]]                                        
             except Exception as e:
                 logger.exception(e)
@@ -409,10 +409,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🔰𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐍𝐎𝐖🔰", url = ms.link)
+                            InlineKeyboardButton("Database", url ='https://t.me/+aTaCc_84o-xhNjJl')
                         ],
                         [
-                            InlineKeyboardButton("⚠️ 𝐂𝐚𝐧'𝐭 𝐀𝐜𝐜𝐞𝐬𝐬❓𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞 ⚠️", url = f"{CH_LINK}")
+                            InlineKeyboardButton("Can't Acsess?  Click Here", url ='https://t.me/tvserieshomenew/87868')
                         ]
                     ]
                 )
@@ -444,7 +444,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                                        file_size='' if size is None else size,
                                                        file_caption='' if f_caption is None else f_caption)
                 buttons = [[
-                  InlineKeyboardButton('JOIN GROUP', url='https://t.me/cinemakodathi')
+                  InlineKeyboardButton('JOIN GROUP', url='https://t.me/tvserieshomenew')
                   ]]
             except Exception as e:
                 logger.exception(e)
@@ -459,9 +459,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "tip2": 
-        await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • താഴെ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+        await query.answer(f" • Hey not in this 😃 \n\n • Click on the movie list below 😁",show_alert=True)
     elif query.data == "sub": 
-        await query.answer(f" • ബ്രോ ഇതിലല്ല 😃 \n\n • ഗ്രൂപ്പിൽ വരുന്ന മൂവി ലിസ്റ്റിലാണ് ഞെക്കേണ്ടത്😁",show_alert=True)
+        await query.answer(f" • Hey not in this 😃 \n\n • Click on the movie list below😁",show_alert=True)
     elif query.data == "imd_alert":
         imdb = await get_poster(query.message.reply_to_message.text)
         await query.answer(f"""🏷 Title: {imdb['title']} 
@@ -483,7 +483,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
             InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/farshadck")                    
+            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/fury_sl")                    
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -493,8 +493,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "mfk1":
         buttons = [[
-            InlineKeyboardButton('ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ', callback_data="moviekittan"),
-            InlineKeyboardButton('ᴀʙᴏᴜᴛ & ʜᴇʟᴩ', callback_data='stats')
+            InlineKeyboardButton('Database', url="https://t.me/+aTaCc_84o-xhNjJl"),
+            InlineKeyboardButton('Upsates', url='t.me/betabotslk')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
