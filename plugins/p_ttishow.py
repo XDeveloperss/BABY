@@ -37,8 +37,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/fury_sl"),
+            InlineKeyboardButton('📢 Updates', url='https://Betabotslk')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -49,7 +49,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/moviesupdateck")
+                InlineKeyboardButton('Database', url="https://t.me/tvserieshomenew")
             ]]
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
@@ -57,7 +57,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                text=f"<b>👋 Hi! {u.mention},</b> Welcome to <b>{message.chat.title}</b>\n\n<b>👇 നിങൽക് മൂവി കിട്ടാൻ നിങ്ങൾ അടിയിൽ ഉള്ള ചാനലിൽ ജോയിൻ ചെയ്യണം 👇</b>",
+                text=f"<b>👋 Hi! {u.mention},</b> Thanks For Strating Me. I Worked For TSH Media @tvserieshomenew </b>",
                 disable_web_page_preview = True,
                 reply_markup=InlineKeyboardMarkup(buttons))
 
@@ -73,7 +73,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('Chat', url=f'https://t.me/tvserieshomenew')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
