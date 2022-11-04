@@ -31,10 +31,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
+                InlineKeyboardButton('🤖 Updates', url='https://t.me/BetaBotsLK')
             ],
             [
-                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/Fury_SL"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -50,20 +50,20 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         now = datetime.datetime.now()
-        tz = pytz.timezone('asia/kolkata')
+        tz = pytz.timezone('asia/colombo')
         your_now = now.astimezone(tz)
         hour = your_now.hour
         if 0 <= hour <12:
-            get = "Gᴏᴏᴅ ᴍᴏʀɴɪɴɢ"
+            get = "TSH MEDIA"
         elif 12 <= hour <17:
-            get = 'Gᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ'
+            get = 'TSH MEDIA'
         else:
-            get = 'Gᴏᴏᴅ ᴇᴠᴇɴɪɴɢ'
+            get = 'TSH MEDIA'
         buttons = [[
-            InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
-            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
+            InlineKeyboardButton('Database', url="https://t.me/+aTaCc_84o-xhNjJl"),
+            InlineKeyboardButton('Updates', url="t.me/betabotslk") 
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/farshadck")          
+            InlineKeyboardButton('Dev', url="https://t.me/fury_sl")          
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         h = await message.reply_sticker(
@@ -87,7 +87,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🤖 Join Updates Channel", url="https://t.me/+aTaCc_84o-xhNjJl"
                 )
             ]
         ]
@@ -105,10 +105,10 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ', callback_data="mfk1"),
-            InlineKeyboardButton('ꜱᴇᴀʀᴄʜ ᴍᴏᴠɪᴇꜱ', callback_data="mfk2") 
+            InlineKeyboardButton('Database', url="https://t.me/+aTaCc_84o-xhNjJl"),
+            InlineKeyboardButton('Updates', url="t.me/betabotslk")
             ],[
-            InlineKeyboardButton('ᴀᴅᴍɪɴ', url="https://t.me/farshadck")                  
+            InlineKeyboardButton('Dev', url="https://t.me/Fury_SL")                  
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -288,9 +288,9 @@ async def report(bot, message):
 @Client.on_message(filters.command("moviekittan"))
 async def moviekittan(bot, message):
     buttons = [[
-        InlineKeyboardButton("ʟᴀᴛᴇꜱᴛ ᴍᴏᴠɪᴇꜱ ᴄʜᴀɴɴᴇʟ", url='t.me/cinemakodathi')
+        InlineKeyboardButton("Main Group", url='https://t.me/tvserieshomenew')
         ],[
-        InlineKeyboardButton("ᴄɪɴᴇᴍᴀ ᴋᴏᴅᴀᴛʜɪ", url='t.me/cinemakodathi')
+        InlineKeyboardButton("Database", url='https://t.me/+aTaCc_84o-xhNjJl')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     message.reply_chat_action("typing")
@@ -305,13 +305,13 @@ async def moviekittan(bot, message):
 @Client.on_message(filters.command("bot"))
 async def bot(bot, message):
     buttons = [[
-        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", callback_data="getmovie"),
-        InlineKeyboardButton("ʜᴏᴡ ᴛᴏ ꜱᴇᴀʀᴄʜ ꜰɪʟᴇ", callback_data="searchfile")
+        InlineKeyboardButton("Main Group", url='https://t.me/tvserieshomenew'),
+        InlineKeyboardButton("Database", url='https://t.me/+aTaCc_84o-xhNjJl')
         ],[
-        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="commamds"),
-        InlineKeyboardButton("ᴇɴqᴜɪʀy", callback_data="enqury")
+        InlineKeyboardButton("Developer", url='https://t.me/fury_sl'),
+        InlineKeyboardButton("Updates", url='https://t.me/betabotslk')
         ],[
-        InlineKeyboardButton("ᴊᴏɪɴ ᴍy ɢʀᴏᴜᴩ", url='t.me/cinemakodathi')
+        InlineKeyboardButton("TSHMEDIA", url='t.me/chandux_03')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_chat_action("typing")
@@ -326,9 +326,9 @@ async def bot(bot, message):
 @Client.on_message(filters.command("update"))
 async def update(bot, message):
     buttons = [[
-        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        InlineKeyboardButton("Database", url='https://t.me/+aTaCc_84o-xhNjJl')       
         ],[
-        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
+        InlineKeyboardButton("Updates", url='t.me/betabotslk')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_chat_action("typing")
@@ -341,9 +341,9 @@ async def update(bot, message):
 @Client.on_message(filters.command("cmd"))
 async def cmd(bot, message):
     buttons = [[
-        InlineKeyboardButton("ᴅɪᴅɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇ", url='t.me/moviesupdateck')       
+        InlineKeyboardButton("Database", url='https://t.me/+aTaCc_84o-xhNjJl')       
         ],[
-        InlineKeyboardButton("ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ", url='t.me/cinemakodathi')
+        InlineKeyboardButton("Updates", url='t.me/betabotslk')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(
